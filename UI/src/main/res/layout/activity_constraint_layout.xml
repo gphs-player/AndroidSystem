@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConstraintLayoutActivity"
+    tools:ignore="ContentDescription">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/base"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#0CC"
+                android:gravity="center"
+                android:src="@drawable/star"
+                android:text="我是基准"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                android:typeface="serif"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#CCC"
+                android:gravity="center"
+                android:src="@drawable/star"
+                android:text="我在基准右边"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                android:typeface="serif"
+                app:layout_constraintBaseline_toBaselineOf="@id/base"
+                app:layout_constraintLeft_toRightOf="@id/base"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="#000" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/baseSecond"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#0CC"
+                android:gravity="center"
+                android:src="@drawable/star"
+                android:text="我是基准"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                android:typeface="serif"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/star"
+                android:background="#678"
+                app:layout_constraintLeft_toRightOf="@id/baseSecond"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="100dp"
+                app:layout_goneMarginLeft="10dp"
+                android:src="@drawable/star"
+                android:layout_height="100dp" />
+            <TextView
+                android:elevation="10dp"
+                android:id="@+id/marginLeft"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#CCC"
+                android:gravity="center"
+                android:src="@drawable/star"
+                android:text="(点我)\n我要和基准\n间隔10dp"
+                app:layout_goneMarginLeft="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                android:typeface="serif"
+                app:layout_constraintLeft_toRightOf="@id/star"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
