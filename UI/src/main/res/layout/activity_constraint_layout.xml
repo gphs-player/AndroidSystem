@@ -19,10 +19,7 @@
 
             <TextView
                 android:id="@+id/base"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="#0CC"
-                android:gravity="center"
+                style="@style/square"
                 android:src="@drawable/star"
                 android:text="我是基准"
                 android:textColor="@android:color/black"
@@ -32,10 +29,8 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                style="@style/square"
                 android:background="#CCC"
-                android:gravity="center"
                 android:src="@drawable/star"
                 android:text="我在基准右边"
                 android:textColor="@android:color/black"
@@ -46,53 +41,345 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </android.support.constraint.ConstraintLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="5dp"
-            android:background="#000" />
+        <View style="@style/divider" />
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/baseSecond"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="#0CC"
-                android:gravity="center"
+                style="@style/square"
                 android:src="@drawable/star"
                 android:text="我是基准"
-                android:textColor="@android:color/black"
-                android:textSize="16dp"
-                android:typeface="serif"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/star"
-                android:background="#678"
-                app:layout_constraintLeft_toRightOf="@id/baseSecond"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_width="100dp"
-                app:layout_goneMarginLeft="10dp"
-                android:src="@drawable/star"
-                android:layout_height="100dp" />
-            <TextView
-                android:elevation="10dp"
-                android:id="@+id/marginLeft"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="#CCC"
-                android:gravity="center"
+                android:background="#678"
+                android:src="@drawable/star"
+                app:layout_constraintLeft_toRightOf="@id/baseSecond"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/marginLeft"
+                style="@style/square"
                 android:src="@drawable/star"
                 android:text="(点我)\n我要和基准\n间隔10dp"
-                app:layout_goneMarginLeft="10dp"
-                android:textColor="@android:color/black"
-                android:textSize="16dp"
-                android:typeface="serif"
                 app:layout_constraintLeft_toRightOf="@id/star"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginLeft="10dp" />
+        </android.support.constraint.ConstraintLayout>
+
+        <View style="@style/divider" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/center_horizontal"
+                style="@style/square"
+                android:text="居中显示"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/square"
+                android:text="横向30%\n百分比位置"
+                app:layout_constraintHorizontal_bias="0.3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/center_horizontal" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <View style="@style/divider" />
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/center_start"
+                style="@style/square"
+                android:src="@drawable/star"
+                android:text="我是圆心"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star"
+                app:layout_constraintCircle="@id/center_start"
+                app:layout_constraintCircleAngle="45"
+                app:layout_constraintCircleRadius="100dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star"
+                app:layout_constraintCircle="@id/center_start"
+                app:layout_constraintCircleAngle="90"
+                app:layout_constraintCircleRadius="100dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star"
+                app:layout_constraintCircle="@id/center_start"
+                app:layout_constraintCircleAngle="135"
+                app:layout_constraintCircleRadius="100dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star"
+                app:layout_constraintCircle="@id/center_start"
+                app:layout_constraintCircleAngle="180"
+                app:layout_constraintCircleRadius="100dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star"
+                app:layout_constraintCircle="@id/center_start"
+                app:layout_constraintCircleAngle="225"
+                app:layout_constraintCircleRadius="100dp" />
+
+            <ImageView
+                style="@style/circle_star"
+                android:src="@drawable/star"
+                app:layout_constraintCircle="@id/center_start"
+                app:layout_constraintCircleAngle="270"
+                app:layout_constraintCircleRadius="100dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star"
+                app:layout_constraintCircle="@id/center_start"
+                app:layout_constraintCircleAngle="315"
+                app:layout_constraintCircleRadius="100dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star"
+                app:layout_constraintCircle="@id/center_start"
+                app:layout_constraintCircleAngle="0"
+                app:layout_constraintCircleRadius="100dp" />
+        </android.support.constraint.ConstraintLayout>
+
+        <View style="@style/divider" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/zero"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="#0CC"
+                android:gravity="center"
+                android:text="layout_width=0dp\n layout_marginLeft=10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <View style="@style/divider" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/noConstraint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#CCC"
+                android:src="@drawable/star"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/constraint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#CCC"
+                android:src="@drawable/star"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/noConstraint"
+                app:layout_constraintWidth_min="300dp" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+        <View style="@style/divider" />
+
+        <android.support.constraint.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/fifty"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:background="#CCC"
+                android:gravity="center"
+                android:text="宽度占50%"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="#ACD"
+                android:gravity="center"
+                android:text="宽高比例4:1 \n h和w是指定分母的值"
+                app:layout_constraintDimensionRatio="h,4:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fifty" />
+        </android.support.constraint.ConstraintLayout>
+
+        <View style="@style/divider" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/chain_first"
+                android:background="#CCC"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/star"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/chain_second"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/chain_second"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#ACC"
+                android:src="@drawable/star"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/chain_first"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+        <View style="@style/divider" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/chain_third"
+                android:layout_width="100dp"
+                android:background="#CCC"
+                android:layout_height="100dp"
+                android:src="@drawable/star"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/chain_fourth"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/chain_fourth"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#ACC"
+                android:src="@drawable/star"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/chain_third"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <View style="@style/divider" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:background="#CCC"
+                android:id="@+id/chain_fifth"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/star"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/chain_sixth"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/chain_sixth"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#ACC"
+                android:src="@drawable/star"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/chain_fifth"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <View style="@style/divider" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/chain_seventh"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:src="@drawable/star"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                android:background="#CCC"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/chain_eighth"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/chain_eighth"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                app:layout_constraintHorizontal_weight="1"
+                android:src="@drawable/star"
+                android:background="#ACC"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/chain_seventh"
+                app:layout_constraintTop_toTopOf="parent" />
+
         </android.support.constraint.ConstraintLayout>
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
