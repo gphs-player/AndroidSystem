@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.leo.ui.ConstraintLayoutActivity;
+import com.leo.ui.LayoutInflateActivity;
+import com.leo.ui.RecyclerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +19,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void constraint(View view) {
         Intent intent = new Intent(this, ConstraintLayoutActivity.class);
+        startActivity(intent);
+    }
+
+    public void recycler(View view) {
+        Intent intent = new Intent(this, RecyclerActivity.class);
+        startActivity(intent);
+    }
+
+    public void inflate(View view) {
+        Intent intent = new Intent(this, LayoutInflateActivity.class);
         startActivity(intent);
     }
 }

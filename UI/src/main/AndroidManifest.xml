@@ -3,7 +3,9 @@
     package="com.leo.ui">
 
     <application>
-        <activity android:name=".ConstraintLayoutActivity"></activity>
+        <activity android:name=".LayoutInflateActivity"></activity>
+        <activity android:name=".RecyclerActivity" />
+        <activity android:name=".ConstraintLayoutActivity" />
     </application>
 
 </manifest>

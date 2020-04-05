@@ -10,7 +10,26 @@
     <Button
         android:text="ConstraintLayout使用"
         android:onClick="constraint"
+        android:id="@+id/constraint"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/recycler"
+        android:text="RecyclerView使用"
+        android:onClick="recycler"
+        app:layout_constraintTop_toBottomOf="@id/constraint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="LayoutInflate使用"
+        android:onClick="inflate"
+        app:layout_constraintTop_toBottomOf="@id/recycler"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
