@@ -29,8 +29,53 @@
     <Button
         android:text="LayoutInflate使用"
         android:onClick="inflate"
+        android:id="@+id/inflate"
         app:layout_constraintTop_toBottomOf="@id/recycler"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:text="RootCheck"
+        android:onClick="root"
+        android:id="@+id/root"
+        app:layout_constraintTop_toBottomOf="@id/inflate"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="XposeInstallCheck"
+        android:onClick="xpose"
+        android:id="@+id/xposed"
+        app:layout_constraintTop_toBottomOf="@id/root"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:text="XposeHookCheck"
+        android:onClick="hook"
+        android:id="@+id/hook"
+        app:layout_constraintTop_toBottomOf="@id/xposed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:text="MonitorCheck"
+        android:id="@+id/monitor"
+        android:onClick="monitor"
+        app:layout_constraintTop_toBottomOf="@id/hook"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="SendMSgDD"
+        android:id="@+id/ddmsg"
+        android:onClick="ddmsg"
+        app:layout_constraintTop_toBottomOf="@id/monitor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </android.support.constraint.ConstraintLayout>
